@@ -1,0 +1,27 @@
+x=5
+y="john"
+print(x)
+print(y)
+
+x=4     #x is of type int
+x="sally"#x is now type of str
+
+x=str(3)    #x will be '3'
+y=int(3)    #y will be 3
+z=float(3)
+
+x=5
+Y="john"
+print(type(x))
+print(type(Y))
+
+X="john"
+x='john'
+
+a=4
+A="sally"
+
+if 5<6
+print("false")
+else
+print("true")
