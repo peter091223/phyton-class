@@ -1,0 +1,39 @@
+def my_function1():
+    print("hello from a function")
+    
+def my_function2():
+    print("hello from a function")
+    
+    my_function2()
+    
+def my_function3(fname):
+    print(fname + " hong")
+    
+my_function3("Peter")
+my_function3("Fiona")
+my_function3("Azmat")
+
+def my_function(fname, lname):
+    print(fname + " " + lname)
+    
+my_function("Peter" , "hong")
+
+def my_function4(child3, child2, child1):
+    print("the oldest child is " + child1)
+    
+my_function4(child1="Azmat", child2= "Peter", child3= "james")
+
+#from here is "passing list as an argument"
+
+def my_function(food):
+    for x in food:
+        print(x)
+        
+fruits = ["peach", "mango", "apple"]
+
+my_function(fruits)
+
+def my_function5 (x):
+    return 13 * x
+    
+print (my_function5 (3))
