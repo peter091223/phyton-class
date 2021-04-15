@@ -1,0 +1,20 @@
+def myfunc(n):
+    return lambda a : a * n
+
+mytripler = myfunc(3)
+
+print(mytripler(11))
+
+def yourfunc(c):
+    return lambda b : b * c
+
+yourdoubler = yourfunc(2)
+yourtripler = yourfunc(3)
+
+print(yourdoubler(11))
+print(yourtripler(11))
+
+def my_funcion(*kids):
+    print("The youngest child is " + kids[2])
+
+my_funcion("Emil", "Tobias", "Linus")
