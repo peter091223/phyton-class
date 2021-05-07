@@ -1,0 +1,42 @@
+def all_truthy(*args):
+    return args == [True, True, True]
+
+print(all_truthy(False, True, True))
+print()
+
+#different code
+
+def repeat(txt, n):
+    return "".join([char * n for char in txt])
+
+#different code
+
+print(repeat("hello", 3))
+print()
+
+#different code
+
+def capital_letters(txt):
+    return sum(map(str.islower, txt))
+print()
+
+print(capital_letters("fdjshsjfGGhHJ"))
+print()
+
+#different code
+
+mylist = [1, 2, 3, -7]
+myneglist = [-x for x in mylist]
+print(myneglist)
+print()
+
+def add_odd_to_n(n, sum1=None):
+    if n == 1:
+        sum1 = sum1 + n
+        return sum1
+    if n % 2 == 1:
+        sum1 = sum1 + n
+    return add_odd_to_n(n - 1, sum1)
+
+
+print(add_odd_to_n(5, 0))
