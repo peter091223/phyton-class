@@ -1,0 +1,39 @@
+def find_even_nums(num):
+	return [x for x in range(2, num+1, 2)]
+print(find_even_nums(8))
+print()
+
+
+def sort_by_length(lst):
+	return sorted(lst, key=len)
+	#hello = list(lst)
+	#hello.sort(key=len)
+	#return hello
+
+
+print(sort_by_length(["Google", "Apple", "Microsoft"]))
+print()
+
+
+
+def clone(lst):
+	return lst + [lst]
+#lst.append(list(lst))
+#return lst
+
+
+print(clone([1, 1]))
+
+
+def probability(lst, n):
+	return round(sum(1 for x in lst if x >= n) / len(lst) * 100, 1)
+
+
+print(probability([6, 9, 2], 3))
+
+
+def is_subset(lst1, lst2):
+	return set(lst1) <= set(lst2)
+
+
+print(is_subset([5, 9, 2], [5, 3, 7, 9, 2]))
