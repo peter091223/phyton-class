@@ -1,0 +1,49 @@
+def move_to_end(lst, el):
+    for x in range(lst.count(el)):  # make a for lst that counts the lst
+        lst.remove(el)  # remove el
+        lst.append(el)  # append el to the lst
+    return lst  # return lst
+
+
+print(move_to_end([1, 3, 2, 4, 4, 1], 1))
+print("move to the end")
+print()
+
+
+def filter_list(l):
+    return [i for i in l if type(i) == int]  # make an for loop that just picks the type of i == int
+
+
+print(filter_list([3, 4, 5, "hello", 4, 2, "apple"]))
+print("filter list")
+print()
+
+
+def square_digits(k):
+    words = list(str(k))  # int list change to str
+    for word in words:  # makes a loop that multiply each number by 2
+        print(int(word) ** 2, end="")  # make an int form of word that is powered by 2
+
+
+print(square_digits(9119))  # it is keep saying none at the end i don't know why
+print("square digits")
+print()
+
+
+def is_symmetrical(num):
+    return num == int(str(num)[::-1])  # the num is equal to reversed str form of num to int
+
+
+print(is_symmetrical(7667))
+print("is symmetrical")
+print()
+
+
+def convert_to_decimal(perc):
+    return [float(x.strip('%')) / 100 for x in perc]  # turning str into float and taking "%" off then dividing by 100
+# making a for loop
+
+
+print(convert_to_decimal(["1%", "2%", "3%"]))
+print("convert to decimal")
+print()
