@@ -1,0 +1,37 @@
+def list_values_types(lst):
+    return [type(x).__name__ for x in lst]  # type x in a loop
+
+
+print(list_values_types([["hello",  1],  10]))
+
+
+def return_unique(lst):
+    return [x for x in lst if lst.count(x) == 1]  # returning x if there is only 1 figure of the int
+
+
+print(return_unique([1, 9, 8, 8, 7, 6, 1, 6]))
+
+
+def in_box(lst):
+    return "*" in str(lst)  # in the string form of lst return true if * is inside the list.
+
+
+print(in_box([
+    "###",
+    "#*#",
+    "###"
+]))
+
+
+def is_isogram(txt):
+    return len(txt) == len(set(txt))  # if len of the lst is equal to len of set txt return true
+
+
+print(is_isogram("Algorism"))
+
+
+def future_people(P, nP):
+    return 360 * nP + P  # 256 + 2 / 976 = 360
+
+
+print(future_people(256, 2))
