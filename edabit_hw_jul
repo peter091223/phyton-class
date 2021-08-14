@@ -1,0 +1,59 @@
+def is_anti_list(lst1, lst2):
+    return all({x, y} == set(lst1) for x, y in zip(lst1, lst2))
+# all x and y in zip of lst 1 and lst2 == the set of lst 1
+
+
+print(is_anti_list(["1", "0", "0", "1"], ["0", "1", "1", "0"]))
+
+
+def get_drink_ID(flavor, ml):
+    return "".join([i[:3].upper() for i in flavor.split(" ")]) + ml.strip("ml")
+
+
+# string joins in favor split with an upper case then added by str class ml
+
+
+print(get_drink_ID("passion fruit", "750ml"))
+
+
+def ends_add_to_10(nums):
+    return sum(int(str(abs(i))[0]) + int(str(abs(i))[-1]) == 10 for i in nums)
+
+
+# sum of the first digit of number and the last digit of numbers == 10 in every num
+
+
+print(ends_add_to_10([19, 46, 2098]))
+
+
+def check_sum(lst, n):
+    return any(n - i for i in lst)
+
+
+print(check_sum([10, 12, 4, 7, 9, 11], 16))
+
+
+def major_sum(lst):
+    pos = sum([i for i in lst if i > 0])  # pos == counting if it isn't 0
+    neg = sum([i for i in lst if i < 0])  # neg == the same
+    zero = lst.count(0)  # counting 0
+
+    if abs(neg) > pos and abs(neg) > zero:  # if the original number of neg is greater than original form of neg
+        # greater than the amount of zero.
+        return neg
+    else:
+        return max(pos, zero)  # else returning the max of pos and neg
+
+
+print(major_sum([1, 2, 3, 4, 0, 0, -3, -2]))
+
+
+def reverse_image(image):
+        return [[(1 - i) for i in j] for j in image]
+
+
+print(reverse_image([
+  [1, 0, 0],
+  [0, 1, 0],
+  [0, 0, 1]
+]))
